@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"; // page router
 
-export default function page() {
+export default function Page() {
   const router = useRouter();
   const { q } = router.query;
 

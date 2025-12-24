@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 
 // Optional Catch All Segment Page by the file name ([], [...], [[...]])
-export default function page() {
+export default function Page() {
   const router = useRouter();
   const { id } = router.query;
 
