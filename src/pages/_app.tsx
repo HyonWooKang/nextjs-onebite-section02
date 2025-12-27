@@ -17,18 +17,14 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <header>
-        {/* a 태그는 서버사이드 렌더링 -> Link로 클라이언트 사이드 렌더링 */}
-        {/* Link 컴포넌트 -> 자동 prefetching => nextwork 탭에서 확인 */}
         <Link href={"/"}>index</Link>
         &nbsp;
-        {/* 명시적으로 prefetching 해제 가능 */}
         <Link href={"/search"} prefetch={false}>
           search
         </Link>
         &nbsp;
         <Link href={"/book/1"}>book</Link>
         <div>
-          {/* test 페이지는 programmatic routing이라 수동으로 prefetching 설정이 필요함 */}
           <button onClick={onClickButton}>/test 페이지로 이동</button>
         </div>
       </header>
